@@ -1,10 +1,9 @@
-import { Button } from 'antd';
-import styles from './index.less';
 import FormRender, { useForm } from 'form-render';
 import { useEffect } from 'react';
-import { DEF_DATA, SCHEMA } from './const';
 import type { SetState } from 'ahooks/lib/useSetState';
-import type { QrCodeType } from './index.d';
+import type { QrCodeType } from '../../index.d';
+import { DEF_DATA, SCHEMA } from '../../constant';
+import styles from '../../index.less';
 
 interface Props {
   onValueChange: SetState<QrCodeType>;
@@ -34,19 +33,6 @@ function Setting(props: Props) {
   return (
     <div className={styles.setting}>
       <FormRender form={form} schema={SCHEMA} onValuesChange={onValuesChange} />
-      <Button type="primary" onClick={form.submit}>
-        提交
-      </Button>
-      <div className={styles.reference}>
-        Photo by
-        <a href="https://unsplash.com/@danielkcheung?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">
-          Daniel K Cheung
-        </a>
-        on
-        <a href="https://unsplash.com/@yangyang33/collections?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">
-          Unsplash
-        </a>
-      </div>
     </div>
   );
 }

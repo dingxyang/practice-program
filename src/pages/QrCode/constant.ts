@@ -1,5 +1,4 @@
 import type { QrCodeType } from './index.d';
-import demo from './demo.jpg';
 
 export const DEF_DATA: QrCodeType = {
   value: 'https://github.com/dingxyang/practice-program',
@@ -7,12 +6,6 @@ export const DEF_DATA: QrCodeType = {
   bgColor: '#FFFFFF',
   fgColor: '#000000',
   level: 'L',
-  imageSettings: {
-    src: demo,
-    width: 24,
-    height: 24,
-    excavate: false,
-  },
 };
 
 export const SCHEMA = {

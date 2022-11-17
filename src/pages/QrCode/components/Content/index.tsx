@@ -1,6 +1,6 @@
-import styles from './index.less';
 import { QRCodeCanvas } from 'qrcode.react';
-import { QrCodeType } from './index.d';
+import type { QrCodeType } from '../../index.d';
+import styles from '../../index.less';
 
 function Content(props: QrCodeType) {
   return (

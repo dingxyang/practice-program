@@ -1,9 +1,9 @@
 import React from 'react';
 import styles from './index.less';
-import Setting from './Setting';
-import Content from './Content';
+import Setting from './components/Setting';
+import Content from './components/Content';
 import { useSetState } from 'ahooks';
-import { DEF_DATA } from './const';
+import { DEF_DATA } from './constant';
 
 const Page: React.FC = () => {
   const [state, steState] = useSetState(DEF_DATA);
