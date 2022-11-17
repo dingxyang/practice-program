@@ -1,10 +1,11 @@
 import styles from './index.less';
 import { QRCodeCanvas } from 'qrcode.react';
+import { QrCodeType } from './index.d';
 
-function Content() {
+function Content(props: QrCodeType) {
   return (
     <div className={styles.content}>
-      <QRCodeCanvas value="https://www.npmjs.com/package/qrcode.react" />
+      <QRCodeCanvas {...props} />
     </div>
   );
 }
